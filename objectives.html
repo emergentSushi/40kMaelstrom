@@ -3,21 +3,23 @@
 <head>
     <meta name="robots" content="noindex" />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         .obj-title {
             height: 31px;
-            width: 253px;
+            max-width: 253px;
             font-size: 20px;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: impact,charcoal,arial black;
+            font-family: impact,sans-serif;
             padding: 7px;
             border: 1px solid white;
             background-color: #0F0F0F;
             border-radius: 6px;
             text-align: center;
+            padding:7px;
         }
 
         .obj-kind {
@@ -43,7 +45,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: impact,charcoal,arial black;
+            font-family: impact,sans-serif;
             padding: 7px;
             border: 1px solid white;
             background-color: #85130D;
@@ -65,14 +67,10 @@
 
         .obj {
             background-color: #354947;
-            width: 460px;
+            max-width: 460px;
             margin: 26px 16px 16px 16px;
             border: 1px solid white;
             border-radius: 12px;
-        }
-
-        .obj-wrapper {
-            border-top: 2px solid white;
         }
 
         #dump {
@@ -91,6 +89,11 @@
             padding: 16px;
         }
 
+        body > p {
+            font-family: sans-serif;
+            color: white;
+        }
+
         button {
             width: 230px;
             height: 30px;
@@ -98,7 +101,6 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
     <script type="text/javascript">
         function getRandomInt(min, max) {
             min = Math.ceil(min);
@@ -130,6 +132,9 @@
         });
     </script>
     <body>
+        <p>
+            Tap an objective to add it to your active list. Tap and active objective to remove it.
+        </p>
         <div>
             <button id="pick">Pick Random</button>
             <button id="clear">Clear all</button>
@@ -137,7 +142,7 @@
         </div>
         <div class="obj-wrapper">
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">11</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -166,7 +171,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">12</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -195,7 +200,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">13</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -224,7 +229,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">14</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -253,7 +258,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">15</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -282,7 +287,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">16</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -311,7 +316,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">21</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -340,7 +345,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">22</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -369,7 +374,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">23</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -398,7 +403,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">24</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -427,7 +432,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">25</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -456,7 +461,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">26</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -485,7 +490,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">31</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -514,7 +519,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">32</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -543,7 +548,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">33</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -572,7 +577,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">34</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -601,7 +606,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">35</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -630,7 +635,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">36</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -659,7 +664,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">41</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -688,7 +693,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">42</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -717,7 +722,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">43</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -746,7 +751,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">44</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -775,7 +780,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">45</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -804,7 +809,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">46</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -833,7 +838,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">51</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -862,7 +867,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">52</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -891,7 +896,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">53</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -920,7 +925,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">54</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -949,7 +954,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">55</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -978,7 +983,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">56</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -1007,7 +1012,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">61</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -1036,7 +1041,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">62</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -1065,7 +1070,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">63</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -1094,7 +1099,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">64</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -1123,7 +1128,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">65</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
@@ -1152,7 +1157,7 @@
                 </div>
             </div>
             <div class="obj">
-                <div style="padding-top:5px;position:relative;width:464px;margin:9px 0px 9px 0px">
+                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
                     <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">66</div>
                     </div>
                     <div class="ct" style="top:-21px;left:58px;position:absolute">
