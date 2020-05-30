@@ -42,16 +42,10 @@ function renderFor(army) {
     $(root).empty();
     var objectives = [];
     for (var i = 0; i < data.length; i++) {
-        objectives.push(htmlToElement(render(data[i], 'objective')));
+        objectives.push(render(data[i], 'objective'));
     }
     root.append(objectives);
     rebindEvents();
-}
-
-function htmlToElement(html) {
-    var template = document.createElement('template');
-    template.innerHTML = html.trim();
-    return template.content.firstChild;
 }
 
 function render(data, id) {

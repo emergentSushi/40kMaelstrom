@@ -132,3 +132,15 @@ button#clear {
     font-size: 18px;
     margin-bottom: 12px;
 }
+
+.obj-holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+}
+
+@media (max-width: 800px) { 
+    .obj-holder {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
