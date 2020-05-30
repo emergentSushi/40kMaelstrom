@@ -8,7 +8,7 @@
         .obj-title {
             height: 31px;
             max-width: 253px;
-            font-size: 20px;
+            font-size: 24px;
             color: white;
             display: flex;
             justify-content: center;
@@ -25,7 +25,7 @@
         .obj-kind {
             height: 31px;
             width: 97px;
-            font-size: 12px;
+            font-size: 18px;
             display: flex;
             color: white;
             justify-content: center;
@@ -57,6 +57,7 @@
             padding: 14px 24px 0 24px;
             color: white;
             text-align: center;
+            font-size: 18px;
         }
 
         .obj-body {
@@ -71,13 +72,23 @@
             margin: 26px 16px 16px 16px;
             border: 1px solid white;
             border-radius: 12px;
+            font-size: 18px;
         }
 
         #dump {
             border: 1px solid white;
             border-radius: 12px;
             background-color: black;
-            clear:both;
+            width: 490px;
+            margin-bottom: 60px;
+        }
+
+        a {
+            color: white;
+        }
+
+        #dump .obj {
+            background-color: RoyalBlue !important;
         }
 
         body {
@@ -95,9 +106,15 @@
         }
 
         button {
-            width: 230px;
-            height: 30px;
+            width: 260px;
+            height: 60px;
+            font-size: 18px;
             margin-bottom: 12px;
+        }
+
+        button#clear {
+            background-color: red;
+            color: white;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
