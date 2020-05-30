@@ -1,7 +1,6 @@
 .obj-title {
-    height: 31px;
+    min-height: 31px;
     width: calc(100% - 198px);
-    font-size: 20px;
     color: white;
     display: flex;
     justify-content: center;
@@ -12,8 +11,6 @@
     background-color: #0F0F0F;
     border-radius: 6px;
     text-align: center;
-    padding:7px;
-
     top:-21px;
     left:58px;
     position:absolute
@@ -27,9 +24,9 @@
 }
 
 .obj-kind {
-    height: 31px;
+    min-height: 31px;
     width: 97px;
-    font-size: 18px;
+    font-size: 14px;
     display: flex;
     color: white;
     justify-content: center;
@@ -42,12 +39,12 @@
     top:-21px;
     right:6px;
     position:absolute;
+    font-style: italic;
 }
 
 .obj-num {
-    height: 31px;
+    min-height: 31px;
     width: 28px;
-    font-size: 20px;
     color: white;
     display: flex;
     justify-content: center;
@@ -58,21 +55,19 @@
     background-color: #85130D;
     border-radius: 6px;
     text-align: center;
-
     top: -21px;
     left: 9px;
     position: absolute;
 }
 
 .obj-subheader {
-    padding: 14px 24px 0 24px;
+    padding: 14px 14px 0 14px;
     color: white;
     text-align: center;
-    font-size: 18px;
 }
 
 .obj-body {
-    padding: 16px 24px 0 24px;
+    padding: 16px 14px 0 14px;
     color: white;
     text-align: center;
 }
