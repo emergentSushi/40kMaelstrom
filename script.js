@@ -36,28 +36,22 @@ function rebindEvents() {
 }
 
 function renderFor(army) {
-    var data;
-
-    switch(army) {
-        case 'salamander':
-            data = salamander.concat(common);
-            break;
-        case 'deathguard':
-            data = deathguard.concat(common);
-            break;
-        default:
-            data = generic.concat(common);
-            break;
-    }
-
+    var data = eval(army).concat(common);
     var root = $('#obj-wrapper');
     $('#dump').empty();
     $(root).empty();
+    var objectives = [];
     for (var i = 0; i < data.length; i++) {
-        root.append(render(data[i], 'objective'));    
+        objectives.push(htmlToElement(render(data[i], 'objective')));
     }
-
+    root.append(objectives);
     rebindEvents();
+}
+
+function htmlToElement(html) {
+    var template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstChild;
 }
 
 function render(data, id) {
