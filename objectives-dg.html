@@ -4,119 +4,7 @@
     <meta name="robots" content="noindex" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        .obj-title {
-            height: 31px;
-            max-width: 253px;
-            font-size: 20px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: impact,sans-serif;
-            padding: 7px;
-            border: 1px solid white;
-            background-color: #0F0F0F;
-            border-radius: 6px;
-            text-align: center;
-            padding:7px;
-        }
-
-        .obj-kind {
-            height: 31px;
-            width: 97px;
-            font-size: 18px;
-            display: flex;
-            color: white;
-            justify-content: center;
-            align-items: center;
-            padding: 7px;
-            border: 1px solid white;
-            background-color: #0F0F0F;
-            border-radius: 6px;
-            text-align: center;
-        }
-
-        .obj-num {
-            height: 31px;
-            width: 28px;
-            font-size: 20px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: impact,sans-serif;
-            padding: 7px;
-            border: 1px solid white;
-            background-color: #85130D;
-            border-radius: 6px;
-            text-align: center;
-        }
-
-        .obj-subheader {
-            padding: 14px 24px 0 24px;
-            color: white;
-            text-align: center;
-            font-size: 18px;
-        }
-
-        .obj-body {
-            padding: 16px 24px 0 24px;
-            color: white;
-            text-align: center;
-        }
-
-        .obj {
-            background-color: #354947;
-            max-width: 460px;
-            margin: 26px 16px 16px 16px;
-            border: 1px solid white;
-            border-radius: 12px;
-            font-size: 18px;
-        }
-
-        #dump {
-            border: 1px solid white;
-            border-radius: 12px;
-            background-color: black;
-            width: 490px;
-            margin-bottom: 60px;
-        }
-
-        a {
-            color: white;
-        }
-
-        #dump .obj {
-            background-color: RoyalBlue !important;
-        }
-
-        body {
-            background-color: #3e4644;
-            max-width: 1000px;
-        }
-
-        body > div:first-child {
-            padding: 16px;
-        }
-
-        body > p {
-            font-family: sans-serif;
-            color: white;
-        }
-
-        button {
-            width: 260px;
-            height: 60px;
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        button#clear {
-            background-color: red;
-            color: white;
-        }
-    </style>
+    <link rel='stylesheet' href='style.css' type='text/css' />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         function getRandomInt(min, max) {
@@ -124,26 +12,26 @@
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min)) + min;
         }
-        $(document).ready(function() {
-            $('#pick').click(function() {
+        $(document).ready(function () {
+            $('#pick').click(function () {
                 var o = $('.obj');
                 var c = $(o[getRandomInt(0, o.length)]).clone();
-                c.click(function() {
+                c.click(function () {
                     c.remove();
                 });
                 $('#dump').append(c);
             });
 
-            $('.obj').click(function() {
+            $('.obj').click(function () {
                 var c = $(this).clone();
-                c.click(function() {
+                c.click(function () {
                     c.remove();
                 });
 
                 $('#dump').append(c);
             });
 
-            $('#clear').click(function() {
+            $('#clear').click(function () {
                 $('#dump').empty();
             });
         });
@@ -159,1045 +47,437 @@
         </div>
         <div class="obj-wrapper">
             <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">11</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEATH MARCH</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">  
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Death Guard</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The slow, inexorable advance of the Death Guard has been the death knell of worlds beyond count.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if at least three friendly DEATH GUARD INFANTRY units are completely within your opponent’s half of the battlefield.</p>
-
-                        </div>
-                    </div>
+                <div class="obj-inner">
+                    <div class="obj-num">11</div><div class="obj-title">
+                        DEATH MARCH
+                    </div><div class="obj-kind"><i>Death Guard</i></div>
+                    <p class="obj-subheader">
+                        <i>The slow, inexorable advance of the Death Guard has been the death knell of worlds beyond count.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if at least three friendly DEATH GUARD INFANTRY units are completely within your opponent’s half of the battlefield.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">12</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DISGUSTING DEVOTIONS</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Death Guard</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Nurgle despises physical frailty and blesses his devoted followers with bloated bodies filled with decay that they may forever forgo its touch.</i>
-                            </p>
-
-                            <p class="obj-body">Whilst this Tactical Objective is active, keep a tally of the number of successful Disgustingly Resilient rolls you make in each turn. Score 1 victory point if you successfully made at least 7 Disgustingly Resilient rolls during this turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">12</div><div class="obj-title">
+                    DISGUSTING DEVOTIONS
+                </div><div class="obj-kind"><i>Death Guard</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Nurgle despises physical frailty and blesses his devoted followers with bloated bodies filled with decay that they may forever forgo its touch.</i>
+                    </p>
+                    <p class="obj-body">Whilst this Tactical Objective is active, keep a tally of the number of successful Disgustingly Resilient rolls you make in each turn. Score 1 victory point if you successfully made at least 7 Disgustingly Resilient rolls during this turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">13</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">GRANDFATHER’S GIFT</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Death Guard</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Nurgle enjoys little more than watching his followers spread his diseases upon the mortal races.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if at least one enemy unit was completely destroyed during your turn, and the last model in the unit was slain by an attack made by a DEATH GUARD model attacking with a plague weapon (i.e. a plaguesword, the Plague Skull of Glothila or any weapon with the Plague Weapon ability).</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">13</div><div class="obj-title">
+                    GRANDFATHER’S GIFT
+                </div><div class="obj-kind"><i>Death Guard</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Nurgle enjoys little more than watching his followers spread his diseases upon the mortal races.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if at least one enemy unit was completely destroyed during your turn, and the last model in the unit was slain by an attack made by a DEATH GUARD model attacking with a plague weapon (i.e. a plaguesword, the Plague Skull of Glothila or any weapon with the Plague Weapon ability).</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">14</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SPREAD CONTAGION</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Death Guard</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The lords of the Death Guard have survived for countless centuries, enduring to spread disease to every world they invade.</i>
-                            </p>
-
-                            <p class="obj-body">When this Tactical Objective is generated, nominate one of your DEATH GUARD CHARACTERS. Score 1 victory point if this character is still alive at the end of the game.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">14</div><div class="obj-title">
+                    SPREAD CONTAGION
+                </div><div class="obj-kind"><i>Death Guard</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The lords of the Death Guard have survived for countless centuries, enduring to spread disease to every world they invade.</i>
+                    </p>
+                    <p class="obj-body">When this Tactical Objective is generated, nominate one of your DEATH GUARD CHARACTERS. Score 1 victory point if this character is still alive at the end of the game.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">15</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SYMBOL OF THE FLY LORD</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Death Guard</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The symbolism of the three-eyed fly holds great meaning to the worshippers of the Plague God.</i>
-                            </p>
-                            <p class="obj-body">Score D3 victory points if you control exactly three objective markers at the end of the turn – no more, no less.</p>
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">15</div><div class="obj-title">
+                    SYMBOL OF THE FLY LORD
+                </div><div class="obj-kind"><i>Death Guard</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The symbolism of the three-eyed fly holds great meaning to the worshippers of the Plague God.</i>
+                    </p>
+                    <p class="obj-body">Score D3 victory points if you control exactly three objective markers at the end of the turn – no more, no less.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">16</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEATH BEGETS LIFE</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Death Guard</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>To the followers of Nurgle, the endless cycle of sowing death that new life may bloom is nothing less than a sacred act.</i>
-                            </p>
-                            <p class="obj-body">Whilst this Tactical Objective is active, keep a tally of the number of enemy models you kill in each of your turns. Score 1 victory point if you killed at least 7 enemy models this turn, and 1 additional victory point for every 7 models killed in excess of this (up to a maximum of 7 victory points).</p>
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">16</div><div class="obj-title">
+                    DEATH BEGETS LIFE
+                </div><div class="obj-kind"><i>Death Guard</i></div><div>
+                    <p class="obj-subheader">
+                        <i>To the followers of Nurgle, the endless cycle of sowing death that new life may bloom is nothing less than a sacred act.</i>
+                    </p>
+                    <p class="obj-body">Whilst this Tactical Objective is active, keep a tally of the number of enemy models you kill in each of your turns. Score 1 victory point if you killed at least 7 enemy models this turn, and 1 additional victory point for every 7 models killed in excess of this (up to a maximum of 7 victory points).</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">21</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SECURE OBJECTIVE 1</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Take and Hold</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you control objective marker 1 at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">21</div><div class="obj-title">
+                    SECURE OBJECTIVE 1
+                </div><div class="obj-kind"><i>Take and Hold</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you control objective marker 1 at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">22</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SECURE OBJECTIVE 2</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Take and Hold</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you control objective marker 2 at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">22</div><div class="obj-title">
+                    SECURE OBJECTIVE 2
+                </div><div class="obj-kind"><i>Take and Hold</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you control objective marker 2 at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">23</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SECURE OBJECTIVE 3</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Take and Hold</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you control objective marker 3 at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">23</div><div class="obj-title">
+                    SECURE OBJECTIVE 3
+                </div><div class="obj-kind"><i>Take and Hold</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you control objective marker 3 at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">24</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SECURE OBJECTIVE 4</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Take and Hold</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you control objective marker 4 at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">24</div><div class="obj-title">
+                    SECURE OBJECTIVE 4
+                </div><div class="obj-kind"><i>Take and Hold</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you control objective marker 4 at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">25</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SECURE OBJECTIVE 5</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Take and Hold</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you control objective marker 5 at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">25</div><div class="obj-title">
+                    SECURE OBJECTIVE 5
+                </div><div class="obj-kind"><i>Take and Hold</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you control objective marker 5 at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">26</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SECURE OBJECTIVE 6</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Take and Hold</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you control objective marker 6 at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">26</div><div class="obj-title">
+                    SECURE OBJECTIVE 6
+                </div><div class="obj-kind"><i>Take and Hold</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A vital objective has been identified in your vicinity. You are ordered to hold it at any cost.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you control objective marker 6 at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">31</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEFEND OBJECTIVE 1</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Storm and Defend</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
-                            </p>
-
-                            <p class="obj-body">Score 2 victory points if you control objective marker 1 at the end of two consecutive turns.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">31</div><div class="obj-title">
+                    DEFEND OBJECTIVE 1
+                </div><div class="obj-kind"><i>Storm and Defend</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
+                    </p>
+                    <p class="obj-body">Score 2 victory points if you control objective marker 1 at the end of two consecutive turns.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">32</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEFEND OBJECTIVE 2</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Storm and Defend</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
-                            </p>
-
-                            <p class="obj-body">Score 2 victory points if you control objective marker 2 at the end of two consecutive turns.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">32</div><div class="obj-title">
+                    DEFEND OBJECTIVE 2
+                </div><div class="obj-kind"><i>Storm and Defend</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
+                    </p>
+                    <p class="obj-body">Score 2 victory points if you control objective marker 2 at the end of two consecutive turns.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">33</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEFEND OBJECTIVE 3</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Storm and Defend</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
-                            </p>
-
-                            <p class="obj-body">Score 2 victory points if you control objective marker 3 at the end of two consecutive turns.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">33</div><div class="obj-title">
+                    DEFEND OBJECTIVE 3
+                </div><div class="obj-kind"><i>Storm and Defend</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
+                    </p>
+                    <p class="obj-body">Score 2 victory points if you control objective marker 3 at the end of two consecutive turns.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">34</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEFEND OBJECTIVE 4</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Storm and Defend</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
-                            </p>
-
-                            <p class="obj-body">Score 2 victory points if you control objective marker 4 at the end of two consecutive turns.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">34</div><div class="obj-title">
+                    DEFEND OBJECTIVE 4
+                </div><div class="obj-kind"><i>Storm and Defend</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
+                    </p>
+                    <p class="obj-body">Score 2 victory points if you control objective marker 4 at the end of two consecutive turns.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">35</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEFEND OBJECTIVE 5</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Storm and Defend</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
-                            </p>
-
-                            <p class="obj-body">Score 2 victory points if you control objective marker 5 at the end of two consecutive turns.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">35</div><div class="obj-title">
+                    DEFEND OBJECTIVE 5
+                </div><div class="obj-kind"><i>Storm and Defend</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
+                    </p>
+                    <p class="obj-body">Score 2 victory points if you control objective marker 5 at the end of two consecutive turns.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">36</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DEFEND OBJECTIVE 6</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Storm and Defend</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
-                            </p>
-
-                            <p class="obj-body">Score 2 victory points if you control objective marker 6 at the end of two consecutive turns.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">36</div><div class="obj-title">
+                    DEFEND OBJECTIVE 6
+                </div><div class="obj-kind"><i>Storm and Defend</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You are charged with the defence of a key objective. It must not be permitted to fall into enemy hands.</i>
+                    </p>
+                    <p class="obj-body">Score 2 victory points if you control objective marker 6 at the end of two consecutive turns.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">41</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">ADVANCE</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Seize Ground</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>You must advance swiftly into no man’s land to prevent your opponent seizing the battlefield.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if no unit from your army is within your deployment zone at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">41</div><div class="obj-title">
+                    ADVANCE
+                </div><div class="obj-kind"><i>Seize Ground</i></div><div>
+                    <p class="obj-subheader">
+                        <i>You must advance swiftly into no man’s land to prevent your opponent seizing the battlefield.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if no unit from your army is within your deployment zone at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">42</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">BEHIND ENEMY LINES</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Seize Ground</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Break through the foe’s army and cut off their lines of escape.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you have at least one unit completely within the enemy’s deployment zone at the end of your turn. If you have at least three units within your opponent’s deployment zone at the end of your turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">42</div><div class="obj-title">
+                    BEHIND ENEMY LINES
+                </div><div class="obj-kind"><i>Seize Ground</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Break through the foe’s army and cut off their lines of escape.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you have at least one unit completely within the enemy’s deployment zone at the end of your turn. If you have at least three units within your opponent’s deployment zone at the end of your turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">43</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">HOLD THE LINE</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Seize Ground</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>It is critical that no foe breaks through your defences. Maintain a strong rearguard to proteyour supply lines.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you have at least three units completely within your deployment zone, and your opponent has no models within your deployment zone, at the end of your turn. This objective cannot be <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Achieving-Tactical-Objectives">achieved</a> on your first turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">43</div><div class="obj-title">
+                    HOLD THE LINE
+                </div><div class="obj-kind"><i>Seize Ground</i></div><div>
+                    <p class="obj-subheader">
+                        <i>It is critical that no foe breaks through your defences. Maintain a strong rearguard to proteyour supply lines.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you have at least three units completely within your deployment zone, and your opponent has no models within your deployment zone, at the end of your turn. This objective cannot be <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Achieving-Tactical-Objectives">achieved</a> on your first turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">44</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">MISSION CRITICAL OBJECTIVE</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Seize Ground</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>This area is of extreme importance. You are to lead an immediate all-out assault to capture it.</i>
-                            </p>
-
-                            <p class="obj-body">When this Tactical Objective is <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Generating-Tactical-Objectives">generated</a>, roll a D6. Score 1 victory point if you control the corresponding <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a>. If the corresponding objective marker was controlled by your opponent at the start of your turn and you control it at the end of your turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">44</div><div class="obj-title">
+                    MISSION CRITICAL OBJECTIVE
+                </div><div class="obj-kind"><i>Seize Ground</i></div><div>
+                    <p class="obj-subheader">
+                        <i>This area is of extreme importance. You are to lead an immediate all-out assault to capture it.</i>
+                    </p>
+                    <p class="obj-body">When this Tactical Objective is <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Generating-Tactical-Objectives">generated</a>, roll a D6. Score 1 victory point if you control the corresponding <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a>. If the corresponding objective marker was controlled by your opponent at the start of your turn and you control it at the end of your turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">45</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SUPREMACY</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Seize Ground</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The battleground is won one yard at a time. Continue to establish a strong military presence in the area.</i>
-                            </p>
-
-                            <p class="obj-body">Score D3 victory points if you control any three <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective markers</a> at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">45</div><div class="obj-title">
+                    SUPREMACY
+                </div><div class="obj-kind"><i>Seize Ground</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The battleground is won one yard at a time. Continue to establish a strong military presence in the area.</i>
+                    </p>
+                    <p class="obj-body">Score D3 victory points if you control any three <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective markers</a> at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">46</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">DOMINATION</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Seize Ground</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Dominate the field of battle. Storm every site of tactical import and leave the foe with no place to hide.</i>
-                            </p>
-
-                            <p class="obj-body">Score D3+3 victory points if you control every <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a> on the battlefield at the end of your turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">46</div><div class="obj-title">
+                    DOMINATION
+                </div><div class="obj-kind"><i>Seize Ground</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Dominate the field of battle. Storm every site of tactical import and leave the foe with no place to hide.</i>
+                    </p>
+                    <p class="obj-body">Score D3+3 victory points if you control every <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a> on the battlefield at the end of your turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">51</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">OVERWHELMING FIREPOWER</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Purge</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>A show of strength is required. Scour the enemy from the face of the battlefield with the use of extreme firepower.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if an enemy unit was destroyed during the <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#3.-SHOOTING-PHASE">Shooting phase</a> of your turn. If 3 or more enemy units were destroyed during the Shooting phase of your turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">51</div><div class="obj-title">
+                    OVERWHELMING FIREPOWER
+                </div><div class="obj-kind"><i>Purge</i></div><div>
+                    <p class="obj-subheader">
+                        <i>A show of strength is required. Scour the enemy from the face of the battlefield with the use of extreme firepower.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if an enemy unit was destroyed during the <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#3.-SHOOTING-PHASE">Shooting phase</a> of your turn. If 3 or more enemy units were destroyed during the Shooting phase of your turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">52</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">BLOOD AND GUTS</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Purge</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Close with the foe and engage them in hand-to-hand combat. Show them no quarter, no mercy.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if an enemy unit was destroyed during the <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#5.-FIGHT-PHASE">Fight phase</a> of this turn. If 3 or more enemy units were destroyed during the Fight phase of this turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">52</div><div class="obj-title">
+                    BLOOD AND GUTS
+                </div><div class="obj-kind"><i>Purge</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Close with the foe and engage them in hand-to-hand combat. Show them no quarter, no mercy.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if an enemy unit was destroyed during the <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#5.-FIGHT-PHASE">Fight phase</a> of this turn. If 3 or more enemy units were destroyed during the Fight phase of this turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">53</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">NO PRISONERS</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Purge</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Exterminate your enemy, show them no mercy.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if an enemy unit was destroyed during your turn. If between 3 and 5 enemy units were destroyed during your turn, score D3 victory points instead. If 6 or more enemy units were destroyed during your turn, score D3+3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">53</div><div class="obj-title">
+                    NO PRISONERS
+                </div><div class="obj-kind"><i>Purge</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Exterminate your enemy, show them no mercy.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if an enemy unit was destroyed during your turn. If between 3 and 5 enemy units were destroyed during your turn, score D3 victory points instead. If 6 or more enemy units were destroyed during your turn, score D3+3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">54</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">AREA DENIAL</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Purge</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>It is critical that this area is dominated. No enemy vanguard or guerilla units can be allowed to disrupt our plans.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if there are no enemy models within 6" of the centre of the battlefield at the end of your turn. If there are no enemy models within 12" of the centre of the battlefield at the end of your turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">54</div><div class="obj-title">
+                    AREA DENIAL
+                </div><div class="obj-kind"><i>Purge</i></div><div>
+                    <p class="obj-subheader">
+                        <i>It is critical that this area is dominated. No enemy vanguard or guerilla units can be allowed to disrupt our plans.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if there are no enemy models within 6" of the centre of the battlefield at the end of your turn. If there are no enemy models within 12" of the centre of the battlefield at the end of your turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">55</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">PSYCHOLOGICAL WARFARE</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Purge</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Break the enemy’s morale, make your foes tremble before you.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if your opponent failed a <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00012">Morale test</span> during this turn. If your opponent failed 3 or more Morale tests, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">55</div><div class="obj-title">
+                    PSYCHOLOGICAL WARFARE
+                </div><div class="obj-kind"><i>Purge</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Break the enemy’s morale, make your foes tremble before you.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if your opponent failed a <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00012">Morale test</span> during this turn. If your opponent failed 3 or more Morale tests, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">56</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">MASTER THE WARP</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Purge</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>Desperate times call for desperate measures – harness the power of the warp to defeat your foes.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if you <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00015">manifested</span> or <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00031">denied</span> a psychic power during this turn. If you manifested or denied 3 or more <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#Psychic-Powers">psychic powers</a>, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">56</div><div class="obj-title">
+                    MASTER THE WARP
+                </div><div class="obj-kind"><i>Purge</i></div><div>
+                    <p class="obj-subheader">
+                        <i>Desperate times call for desperate measures – harness the power of the warp to defeat your foes.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if you <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00015">manifested</span> or <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00031">denied</span> a psychic power during this turn. If you manifested or denied 3 or more <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#Psychic-Powers">psychic powers</a>, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">61</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">KINGSLAYER</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Annihilation</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The enemy commander is a powerful and effective leader and should be slain as quickly as possible.</i>
-                            </p>
-
-                            <p class="obj-body">Score D3 victory points if your opponent’s <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#The-Warlord">Warlord</a> has been destroyed during this or any previous turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">61</div><div class="obj-title">
+                    KINGSLAYER
+                </div><div class="obj-kind"><i>Annihilation</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The enemy commander is a powerful and effective leader and should be slain as quickly as possible.</i>
+                    </p>
+                    <p class="obj-body">Score D3 victory points if your opponent’s <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#The-Warlord">Warlord</a> has been destroyed during this or any previous turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">62</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">WITCH HUNTER</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Annihilation</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The presence of enemy psykers can no longer be tolerated. Eliminate them with extreme prejudice.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if at least one enemy <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00007">PSYKER</span> was destroyed during this turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">62</div><div class="obj-title">
+                    WITCH HUNTER
+                </div><div class="obj-kind"><i>Annihilation</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The presence of enemy psykers can no longer be tolerated. Eliminate them with extreme prejudice.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if at least one enemy <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00007">PSYKER</span> was destroyed during this turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">63</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">SCOUR THE SKIES</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Annihilation</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>It is vital to maintain air superiority.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if at least one enemy unit that can <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#Moving">FLY</a> was destroyed during this turn.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">63</div><div class="obj-title">
+                    SCOUR THE SKIES
+                </div><div class="obj-kind"><i>Annihilation</i></div><div>
+                    <p class="obj-subheader">
+                        <i>It is vital to maintain air superiority.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if at least one enemy unit that can <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#Moving">FLY</a> was destroyed during this turn.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">64</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">ASSASSINATE</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Annihilation</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The enemy looks to their champions for courage. Identify and assassinate them.</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if at least one enemy <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00003">CHARACTER</span> was destroyed during this turn. If 3 or more enemy CHARACTERS were destroyed during this turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">64</div><div class="obj-title">
+                    ASSASSINATE
+                </div><div class="obj-kind"><i>Annihilation</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The enemy looks to their champions for courage. Identify and assassinate them.</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if at least one enemy <span class="tooltip tooltipstered" data-tooltip-content="#tooltip_content00003">CHARACTER</span> was destroyed during this turn. If 3 or more enemy CHARACTERS were destroyed during this turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">65</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">BIG GAME HUNTER</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Annihilation</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>The larger the foe, the greater the glory…</i>
-                            </p>
-
-                            <p class="obj-body">Score 1 victory point if at least one enemy unit with a Wounds characteristic of 10 or more was destroyed during this turn. If at least one enemy unit with a Wounds characteristic of 20 or more was destroyed this turn, score D3 victory points instead.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">65</div><div class="obj-title">
+                    BIG GAME HUNTER
+                </div><div class="obj-kind"><i>Annihilation</i></div><div>
+                    <p class="obj-subheader">
+                        <i>The larger the foe, the greater the glory…</i>
+                    </p>
+                    <p class="obj-body">Score 1 victory point if at least one enemy unit with a Wounds characteristic of 10 or more was destroyed during this turn. If at least one enemy unit with a Wounds characteristic of 20 or more was destroyed this turn, score D3 victory points instead.</p>
                 </div>
             </div>
-            <div class="obj">
-                <div style="padding-top:5px;position:relative;max-width:464px;margin:9px 0px 9px 0px">
-                    <div class="ct" style="top:-15px;left:12px;position:absolute"><div class="obj-num">66</div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:58px;position:absolute">
-                        <div style="padding:6px;"><div class="obj-title" class="ct">PRIORITY ORDERS RECEIVED</div>
-                        </div>
-                    </div>
-                    <div class="ct" style="top:-21px;left:329px;position:absolute;">
-                        <div style="padding:6px;">
-                            <div style="color:#fefefe" bgcolor="#101010">
-                                <div class="obj-kind">
-                                    <i>Priority Order</i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="padding:6px;">
-                        <div bgcolor="#354947">
-                            <p class="obj-subheader">
-                                <i>This mission is of the utmost importance, and cannot be entrusted to anyone else.</i>
-                            </p>
-
-                            <p class="obj-body">When this <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Tactical-Objectives">Tactical Objective</a> is <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Generating-Tactical-Objectives">generated</a>, immediately generate a bonus Tactical Objective – this does not count towards the number of Active Tactical Objectives you currently have in play. Your <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#The-Warlord">Warlord</a> is the only unit that can be used to achieve the bonus Tactical Objective – they must be the only unit used to control an <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a>, the unit that destroys the last model in an enemy unit, and so on. If you achieve this, you score both the number of victory points stated on the bonus Tactical Objective and an additional 3 victory points. If this Tactical Objective is discarded, so too is the bonus Tactical Objective.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="obj">
+            <div class="obj-inner">
+                <div class="obj-num">66</div><div class="obj-title">
+                    PRIORITY ORDERS RECEIVED
+                </div><div class="obj-kind"><i>Priority Order</i></div><div>
+                    <p class="obj-subheader">
+                        <i>This mission is of the utmost importance, and cannot be entrusted to anyone else.</i>
+                    </p>
+                    <p class="obj-body">When this <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Tactical-Objectives">Tactical Objective</a> is <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Generating-Tactical-Objectives">generated</a>, immediately generate a bonus Tactical Objective – this does not count towards the number of Active Tactical Objectives you currently have in play. Your <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#The-Warlord">Warlord</a> is the only unit that can be used to achieve the bonus Tactical Objective – they must be the only unit used to control an <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a>, the unit that destroys the last model in an enemy unit, and so on. If you achieve this, you score both the number of victory points stated on the bonus Tactical Objective and an additional 3 victory points. If this Tactical Objective is discarded, so too is the bonus Tactical Objective.</p>
                 </div>
             </div>
+        </div>
         </div>
     </body>
 </html>
