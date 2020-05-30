@@ -6,36 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel='stylesheet' href='style.css' type='text/css' />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-        $(document).ready(function () {
-            $('#pick').click(function () {
-                var o = $('.obj');
-                var c = $(o[getRandomInt(0, o.length)]).clone();
-                c.click(function () {
-                    c.remove();
-                });
-                $('#dump').append(c);
-            });
-
-            $('.obj').click(function () {
-                var c = $(this).clone();
-                c.click(function () {
-                    c.remove();
-                });
-
-                $('#dump').append(c);
-            });
-
-            $('#clear').click(function () {
-                $('#dump').empty();
-            });
-        });
-    </script>
+    <script src="script.js"></script>
     <body>
         <p>
             Tap an objective to add it to your active list. Tap and active objective to remove it.
@@ -477,7 +448,6 @@
                     <p class="obj-body">When this <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Tactical-Objectives">Tactical Objective</a> is <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Generating-Tactical-Objectives">generated</a>, immediately generate a bonus Tactical Objective – this does not count towards the number of Active Tactical Objectives you currently have in play. Your <a href="http://wahapedia.ru/wh40k8ed/the-rules/core-rules#The-Warlord">Warlord</a> is the only unit that can be used to achieve the bonus Tactical Objective – they must be the only unit used to control an <a href="http://wahapedia.ru/wh40k8ed/the-rules/matched-play#Objective-Markers">objective marker</a>, the unit that destroys the last model in an enemy unit, and so on. If you achieve this, you score both the number of victory points stated on the bonus Tactical Objective and an additional 3 victory points. If this Tactical Objective is discarded, so too is the bonus Tactical Objective.</p>
                 </div>
             </div>
-        </div>
         </div>
     </body>
 </html>

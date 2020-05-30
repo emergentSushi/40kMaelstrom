@@ -6,36 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel='stylesheet' href='style.css' type='text/css' />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-        $(document).ready(function() {
-            $('#pick').click(function() {
-                var o = $('.obj');
-                var c = $(o[getRandomInt(0, o.length)]).clone();
-                c.click(function() {
-                    c.remove();
-                });
-                $('#dump').append(c);
-            });
-
-            $('.obj').click(function() {
-                var c = $(this).clone();
-                c.click(function() {
-                    c.remove();
-                });
-
-                $('#dump').append(c);
-            });
-
-            $('#clear').click(function() {
-                $('#dump').empty();
-            });
-        });
-    </script>
+    <script src="script.js"></script>
     <body>
         <p>
             Tap an objective to add it to your active list. Tap and active objective to remove it.
