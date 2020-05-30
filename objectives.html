@@ -113,8 +113,15 @@
                     c.remove();
                 });
                 $('#dump').append(c);
+            });
 
+            $('.obj').click(function() {
+                var c = $(this).clone();
+                c.click(function() {
+                    c.remove();
+                });
 
+                $('#dump').append(c);
             });
 
             $('#clear').click(function() {
@@ -124,8 +131,8 @@
     </script>
     <body>
         <div>
-            <button id="pick">Pick</button>
-            <button id="clear">Clear</button>
+            <button id="pick">Pick Random</button>
+            <button id="clear">Clear all</button>
             <div id="dump"></div>
         </div>
         <div class="obj-wrapper">
