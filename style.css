@@ -1,84 +1,63 @@
-.obj-title {
-    min-height: 31px;
-    width: calc(100% - 171px);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: impact,sans-serif;
-    padding: 7px;
-    border: 1px solid white;
-    background-color: #0F0F0F;
-    border-radius: 6px;
-    text-align: center;
-    top:-21px;
-    left:58px;
-    position:absolute
+.obj-topline {
+    margin: -35px -8px 0 -8px;
 }
 
-.obj-inner {
-    padding-top:5px;
-    position:relative;
-    max-width:464px;
-    margin:9px 0px 9px 0px
+.obj-topline > div {
+    color: white;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    min-height: 28px;
+    line-height: 28px;
+}
+
+.obj-title {
+    font-family: impact,sans-serif;
+    width: calc(100% - 155px);
+    border: 8px solid;
+    border-image: url(black-border.png) 8 fill;
 }
 
 .obj-kind {
-    min-height: 31px;
     width: 70px;
     font-size: 14px;
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    padding: 7px;
-    border: 1px solid white;
-    background-color: #0F0F0F;
-    border-radius: 6px;
-    text-align: center;
-    top:-21px;
-    right:6px;
-    position:absolute;
     font-style: italic;
+    border: 8px solid;
+    border-image: url(black-border.png) 8 fill;
+    line-height: 18px !important;
 }
 
 .obj-num {
-    min-height: 31px;
     width: 28px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: impact,sans-serif;
-    padding: 7px;
-    border: 1px solid white;
-    background-color: #85130D;
-    border-radius: 6px;
-    text-align: center;
-    top: -21px;
-    left: 9px;
-    position: absolute;
+    border: 7px solid;
+    border-image: url(num-border.png) 7 fill;
 }
 
 .obj-subheader {
-    padding: 14px 14px 0 14px;
+    padding: 0 14px;
     color: white;
+    font-size: 16px;
     text-align: center;
+    font-style: italic;
 }
 
 .obj-body {
-    padding: 16px 14px 0 14px;
+    padding: 10px 14px 0 14px;
     color: white;
     text-align: center;
 }
 
 .obj {
-    background-color: #354947;
+    margin:15px;
+    color: white;
+
     max-width: 460px;
-    margin: 26px 16px 16px 16px;
-    border: 1px solid white;
-    border-radius: 12px;
     font-size: 18px;
+
+    border: 24px solid;
+    border-image: url(obj-border.png) 25 fill;
 }
 
 #dump {
