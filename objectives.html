@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
 <head>
     <meta name="robots" content="noindex" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel='stylesheet' href='style.css' type='text/css' />
-    <script src="https://zeptojs.com/zepto.min.js"></script>
     <script src="data.js"></script>
     <script src="script.js"></script>
     <body>
@@ -20,16 +19,16 @@
             </select>
             <button id="pick">Pick Random</button>
             <button id="clear">Clear all</button>
-            <div id="dump" class="obj-holder"></div>
+            <div id="dump" class="obj-holder black-frame"></div>
         </div>
         <div id="obj-wrapper" class="obj-holder">
         </div>
         <script type="text/html" id="objective">
             <div class="obj">
                 <div class="obj-topline">
-                    <div class="num">{{number}}</div>
-                    <div class="title">{{title}}</div>
-                    <div class="kind">{{kind}}</div>
+                    <div class="num red-frame">{{number}}</div>
+                    <div class="title black-frame">{{title}}</div>
+                    <div class="kind black-frame">{{kind}}</div>
                 </div>
                 <p class="flavor">{{flavor}}</p>
                 <p class="body">{{body}}</p>
