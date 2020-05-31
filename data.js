@@ -115,6 +115,92 @@ var deathguard =
     body:'Whilst this Tactical Objective is active, keep a tally of the number of enemy models you kill in each of your turns. Score 1 victory point if you killed at least 7 enemy models this turn, and 1 additional victory point for every 7 models killed in excess of this (up to a maximum of 7 victory points).'
 }];
 
+var ironwarriors = [{
+    number:11,
+    title:'REPEL INVADERS',
+    kind:'Iron Warriors',
+    flavor:'An Iron Warriors battle line is an unbreachable fortress.',
+    body:'Score D3 victory points if an enemy unit wholly within your deployment zone was destroyed as a result of an attack made by an IRON WARRIORS model from your army this turn.'
+},
+{
+    number:12,
+    title:'TACTICAL DESTRUCTION',
+    kind:'Iron Warriors',
+    flavor:'The enemy seeks to hold a valuable position against you. Attest to their folly by annihilating them.',
+    body:'Score 1 victory point for each enemy unit controlling an objective marker at the start of the turn that was destroyed as a result of an attack made by an IRON WARRIORS model from your army this turn (to a maximum of 6 victory points).'
+},
+{
+    number:13,
+    title:'WANTON OBLITERATION',
+    kind:'Iron Warriors',
+    flavor:'Prove the superiority of the techno-virus by using it to ensure the foe’s annihilation.',
+    body:'Score 1 victory point if an enemy unit was destroyed as a result of an attack made by an IRON WARRIORS CULT OF DESTRUCTION or IRON WARRIORS DAEMON ENGINE model from your army this turn.'
+},
+{
+    number:14,
+    title:'HOLD AND FORTIFY',
+    kind:'Iron Warriors',
+    flavor:'Hold this crucial position and let none dispute your control of it.',
+    body:'When this Tactical Objective is generated, nominate one objective marker. Score D3 victory points if you control that objective marker at the end of your next turn (or at the end of the game).'
+},
+{
+    number:15,
+    title:'MASTERS OF DEMOLITION',
+    kind:'Iron Warriors',
+    flavor:'The Iron Warriors have no equal when it comes to demolition.',
+    body:'Score 1 victory point if an enemy unit entirely on or within a terrain feature, or an enemy BUILDING model, was destroyed as a result of an attack made by an IRON WARRIORS model from your army this turn.'
+},
+{
+    number:16,
+    title:'DESTROY THEIR ARMOURY',
+    kind:'Iron Warriors',
+    flavor:'Without vehicle support, the enemy’s strength is nothing compared to your own.',
+    body:'Score 1 victory point if an enemy VEHICLE model was destroyed as a result of an attack made by an IRON WARRIORS model from your army this turn. If an enemy TITANIC model was destroyed as a result of an attack made by an IRON WARRIORS model from your army this turn, score D3 victory points instead.'
+}];
+
+var bloodangels = [{
+    number:11,
+    title:'VALOUR OF THE ANGELS',
+    kind:'Blood Angels',
+    flavor:'There are few warriors as noble as the sons of Sanguinius. Let the enemy’s champions witness how true heroes make war.',
+    body:'Score 1 victory point if at least 1 enemy CHARACTER was slain by one of your BLOOD ANGELS units in the Fight phase of this turn. Score D3 victory points instead if at least 1 enemy CHARACTER was slain in the Fight phase of this turn by an attack made by one of your BLOOD ANGELS CHARACTERS.'
+},
+{
+    number:12,
+    title:'AERIAL ASSAULT',
+    kind:'Blood Angels',
+    flavor:'The scream of turbines and the roar of jump packs shall be the enemy’s funeral dirge.',
+    body:'Score 1 victory point if at least 1 enemy unit was destroyed in your turn, and the last model in the enemy unit was slain by an attack made by a BLOOD ANGELS unit that can FLY. Score D3 victory points instead if at least 1 enemy unit was destroyed in this manner by a unit that arrived as reinforcements during the turn.'
+},
+{
+    number:13,
+    title:'PURITY THROUGH BLOODSHED',
+    kind:'Blood Angels',
+    flavor:'The curse of the Blood Angels can become a potent weapon if harnessed with discipline and control.',
+    body:'Score 1 victory point if an enemy unit was destroyed during the Fight phase of this turn and the last model in the enemy unit was slain by an attack made by a BLOOD ANGELS unit. Score D3 victory points instead if at least 3 enemy units were so destroyed, or D3+3 victory points if at least 6 enemy units were so destroyed.'
+},
+{
+    number:14,
+    title:'DECAPITATING STRIKE',
+    kind:'Blood Angels',
+    flavor:'Sanguinius always taught that, to slay the beast, one needs only to remove the head.',
+    body:'When this Tactical Objective is generated, work out which of your opponent’s CHARACTERS currently on the battlefield has the highest Power Rating. If 2 or more eligible CHARACTERS have the same Power Rating, choose one. Score 1 victory point if that character was slain by a BLOOD ANGELS unit this turn.'
+},
+{
+    number:15,
+    title:'SWIFT ADVANCE',
+    kind:'Blood Angels',
+    flavor:'Take the fight to your foe, and show them that nowhere is safe from the retribution of the Blood Angels.',
+    body:'Score 1 victory point if at least 3 of your BLOOD ANGELS units Advanced this turn.'
+},
+{
+    number:16,
+    title:'NOBLE SELF-SACRIFICE',
+    kind:'Blood Angels',
+    flavor:'To be a hero of the Imperium is to walk a path towards a martyr’s death; the only question is how dearly you will sell your life.',
+    body:'Score 1 victory point for each of your BLOOD ANGELS CHARACTERS that was slain this turn.'
+}];
+
 var common =
 [{
 	number:21,
