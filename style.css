@@ -104,6 +104,10 @@ button#clear {
     color: white;
 }
 
+button#pick {
+    background-color: lightgray;
+}
+
 #controls {
     margin: 0 auto 0 auto;
 }
