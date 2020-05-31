@@ -8,6 +8,10 @@ HTMLElement.prototype.empty = function() {
     this.innerHTML = '';
 }
 
+HTMLElement.prototype.find = function(query) {
+    return find(this, query);
+}
+
 HTMLElement.prototype.on = function(event, cb) {
     this.addEventListener(event, cb);
 }
@@ -19,27 +23,40 @@ if (!HTMLElement.prototype.remove) {
 }
 
 $ = function(query) {
-    var nodes = document.querySelectorAll(query);
+    return find(document, query);
+}
+
+function find(root, query) {
+    var nodes = root.querySelectorAll(query);
     if (nodes.length === 1) {
         return nodes[0];
     }
     else return nodes;
 }
 
-document.addEventListener( "DOMContentLoaded", function(){
+var selectedObjectives = [];
+document.addEventListener( "DOMContentLoaded", function() {
     renderFor($('#option').value.toString());
 
     $('#pick').on('click', function() {
-        var o = $('.obj');
-        var c = o[Math.randomRange(0, o.length)].cloneNode(true);
-        c.on('click', function() {
-            c.remove();
-        });
-        $('#dump').appendChild(c);
+        var o = $('#obj-wrapper .obj');
+        if (selectedObjectives.length === o.length) {
+            return;
+        }
+        
+        var selected;
+
+        do {
+            selected = o[Math.randomRange(0, o.length)];
+        }
+        while (selectedObjectives.indexOf(getNum(selected)) !== -1);
+        selectedObjectives.push(getNum(selected));
+
+        cloneTo(selected, $('#dump'));
     });
 
     $('#clear').on('click', function() {
-        $('#dump').empty();
+        clearSelected();
     });
 
     $('#option').on('change', function() {
@@ -48,32 +65,45 @@ document.addEventListener( "DOMContentLoaded", function(){
 });
 
 function rebindEvents() {
-    var objectives = $('.obj');
+    var objectives = $('#obj-wrapper .obj');
     for (var i = 0; i < objectives.length; i++) {
         objectives[i].on('click', function() {
-            var c = this.cloneNode(true);
-            c.on('click', function() {
-                c.remove();
-            });
-
-            $('#dump').appendChild(c);
+            cloneTo(this, $('#dump'));
         });
     }
 }
 
+function cloneTo(source, target){
+    var c = source.cloneNode(true);
+    c.on('click', function() {
+        this.remove();
+    });
+    target.appendChild(c);
+}
+
 function renderFor(army) {
-    var data = eval(army).concat(common);
     var root = $('#obj-wrapper');
-    $('#dump').empty();
+    clearSelected();
     root.empty();
     var objectives = [];
+
+    var data = eval(army).concat(common);
     for (var i = 0; i < data.length; i++) {
         objectives.push(render(data[i], 'objective'));
     }
 
-    var documentFragment = document.createRange().createContextualFragment(objectives.join(''));
-    root.appendChild(documentFragment);
+    var objectiveNodes = document.createRange().createContextualFragment(objectives.join(''));
+    root.appendChild(objectiveNodes);
     rebindEvents();
+}
+
+function clearSelected() {
+    selectedObjectives = [];
+    $('#dump').empty();
+}
+
+function getNum(obj) {
+    return obj.find('.num').innerText;
 }
 
 function render(data, id) {
