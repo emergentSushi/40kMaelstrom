@@ -10,7 +10,8 @@ $(document).ready(function() {
         var o = $('.obj');
         var c = $(o[getRandomInt(0, o.length)]).clone();
         c.click(function() {
-            c.remove();
+            c.addClass('hidden');
+            setTimeout(() => c.remove(), 100);
         });
         $('#dump').append(c);
     });
@@ -28,7 +29,8 @@ function rebindEvents() {
     $('.obj').click(function() {
         var c = $(this).clone();
         c.click(function() {
-            c.remove();
+            c.addClass('hidden');
+            setTimeout(() => c.remove(), 100);
         });
 
         $('#dump').append(c);

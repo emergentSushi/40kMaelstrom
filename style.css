@@ -12,14 +12,14 @@
     line-height: 28px;
 }
 
-.obj-title {
+.obj .title {
     font-family: impact,sans-serif;
     width: calc(100% - 155px);
     border: 8px solid;
     border-image: url(black-border.png) 8 fill;
 }
 
-.obj-kind {
+.obj .kind {
     width: 70px;
     font-size: 14px;
     font-style: italic;
@@ -28,23 +28,20 @@
     line-height: 18px !important;
 }
 
-.obj-num {
+.obj .num {
     width: 28px;
     font-family: impact,sans-serif;
     border: 7px solid;
     border-image: url(num-border.png) 7 fill;
 }
 
-.obj-subheader {
-    padding: 0 14px;
-    color: white;
+.obj .flavor {
     font-size: 16px;
     text-align: center;
     font-style: italic;
 }
 
-.obj-body {
-    padding: 10px 14px 0 14px;
+.obj .body {
     color: white;
     text-align: center;
 }
@@ -52,23 +49,32 @@
 .obj {
     margin:15px;
     color: white;
-
     max-width: 460px;
     font-size: 18px;
-
     border: 24px solid;
     border-image: url(obj-border.png) 25 fill;
 }
 
+.hidden
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.1s, opacity 0.1s linear;
+}          
+
 #dump {
-    border: 1px solid white;
-    border-radius: 12px;
-    background-color: black;
+    border: 8px solid;
+    border-image: url(black-border.png) 8 fill;
     margin-bottom: 60px;
+    padding: 12px 0 0 6px;
 }
 
 a {
     color: white;
+}
+
+p {
+    margin: 16px 0 0 0;
 }
 
 body {
