@@ -71,10 +71,6 @@ a {
     color: white;
 }
 
-#dump .obj {
-    background-color: RoyalBlue !important;
-}
-
 body {
     background-color: #3e4644;
     max-width: 1000px;
