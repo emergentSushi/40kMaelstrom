@@ -1,5 +1,6 @@
 .obj-topline {
     margin: -35px -8px 0 -8px;
+    min-width: 287px;
 }
 
 .obj-topline > div {
@@ -94,7 +95,7 @@ body > p {
 button {
     width: 100%;
     height: 60px;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 12px;
 }
 
